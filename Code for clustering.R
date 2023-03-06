@@ -1,4 +1,6 @@
-folder1=list.files("D:/FDGDATA")
+#Left hemisphere
+
+folder1=list.files("SUBJDIR")
 
 t=length(folder1)
 vstr3<-matrix(0,nrow=t,ncol=17)
@@ -12,9 +14,9 @@ vstr2=numeric(1000)
 
 for (i in 1:length(folder1)){
   path1=folder1[i]
-  path2=paste("D:/FDGDATA/",path1,"/gtm.stats.dat",sep="")
-  path3=paste("D:/ALFFDATA/",path1,"/gtm.stats.dat",sep="")
-  path4=paste("D:/AV45DATA/",path1,"/gtm.stats.dat",sep="")
+  path2=paste("SUBJDIR/",path1,"/gtm.stats.dat",sep="")
+  path3=paste("SUBJDIR/",path1,"/gtm.stats.dat",sep="")
+  path4=paste("SUBJDIR/",path1,"/gtm.stats.dat",sep="")
   a1=read.table(path2)
   a2=read.table(path3)
   a3=read.table(path4)
@@ -186,9 +188,9 @@ outid=cutree(outhclust, k=5)
 table(outid,paste("index",1:116,""))
 
 
+#Right hemisphere
 
-
-folder1=list.files("D:/第二篇文章R代码/HABSSTAT/FDGdata")
+folder1=list.files("SUBJDIR")
 t=length(folder1)
 vstr3<-matrix(0,nrow=t,ncol=17)
 vstr4<-matrix(0,nrow=t,ncol=17)
@@ -201,9 +203,9 @@ vstr2=numeric(1000)
 
 for (i in 1:length(folder1)){
   path1=folder1[i]
-  path2=paste("D:/第二篇文章R代码/HABSSTAT/FDGDATA/",path1,"/gtm.stats.dat",sep="")
-  path3=paste("D:/第二篇文章R代码/HABSSTAT/ALFFDATA/",path1,"/gtm.stats.dat",sep="")
-  path4=paste("D:/第二篇文章R代码/HABSSTAT/AV45DATA/",path1,"/gtm.stats.dat",sep="")
+  path2=paste("SUBJDIR",path1,"/gtm.stats.dat",sep="")
+  path3=paste("SUBJDIR",path1,"/gtm.stats.dat",sep="")
+  path4=paste("SUBJDIR",path1,"/gtm.stats.dat",sep="")
   a1=read.table(path2)
   a2=read.table(path3)
   a3=read.table(path4)
